@@ -22,13 +22,13 @@ app.get('/', function(req, res) {
 
 app.use(function(req, res, next) {
 	res.status(404);
-	res.render('404');
+	res.render('404', { layout: 'error-page' });
 }); 
 
 app.use(function(err, req, res, next) {
 	console.error(err.stack);
 	res.status(500);
-	res.render('500');
+	res.render('500', { layout: 'error-page' });
 });
 
 app.listen(app.get('port'), function() {

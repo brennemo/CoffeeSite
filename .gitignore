@@ -1,2 +1,5 @@
 # ignore packages installed by npm
 node_modules*
+
+# don't commit log files
+log
