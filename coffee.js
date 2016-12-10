@@ -26,7 +26,7 @@ app.get('/passport', function(req, res) {
 });
 
 app.get('/explore', function(req, res, next) {
-	mysql.pool.query('select shop_id, shop_name from CoffeeShops', function(err, rows, fields) {
+	mysql.pool.query('select shop_id, shop_name, shop_photo_t from CoffeeShops', function(err, rows, fields) {
 		if(err) {
             next(err)
             return;
@@ -37,7 +37,7 @@ app.get('/explore', function(req, res, next) {
 
 app.get('/menu/:id', function(req, res, next) {
 	var id = req.params.id; 
-	mysql.pool.query('select MenuItems.item_id, MenuItems.item_name, CoffeeShops.shop_id, CoffeeShops.shop_name from MenuItems inner join ShopMenus on MenuItems.item_id = ShopMenus.item inner join CoffeeShops on ShopMenus.shop = CoffeeShops.shop_id where CoffeeShops.shop_id ='+id, function(err, rows, fields){
+	mysql.pool.query('select MenuItems.item_id, MenuItems.item_name, CoffeeShops.shop_id, CoffeeShops.shop_name, CoffeeShops.shop_photo_m from MenuItems inner join ShopMenus on MenuItems.item_id = ShopMenus.item inner join CoffeeShops on ShopMenus.shop = CoffeeShops.shop_id where CoffeeShops.shop_id ='+id, function(err, rows, fields){
 		if(err) {
 			next(err)
 			return;
