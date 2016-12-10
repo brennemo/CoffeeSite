@@ -3,6 +3,3 @@ node_modules*
 
 # don't commit log files
 log
-
-#don't commit credentials
-dbcon.js 
