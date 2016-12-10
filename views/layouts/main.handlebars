@@ -24,32 +24,8 @@
 	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
   </head>
   <body>
-	<!-- Static navbar -->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-		  <div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			  <span class="sr-only">Toggle navigation</span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			  <span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Coffee Shop</a>
-		  </div>
-		  <div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-			  <li class="active"><a href="#">Home</a></li>
-			  <li><a href="#">About</a></li>
-			  <li><a href="#">Menu</a></li>
-			  <li><a href="#">Locations</a></li>
-			  <li><a href="#">Contact Us</a></li>
-			</ul>
-		  </div><!--/.nav-collapse -->
-		</div><!--/.container-fluid -->
-	</nav>
-	<div class="container">  
+	{{> navbar}} 
     {{{body}}}
-	</div>
 	{{#if showTests}}
 		<div id="mocha"></div>
 		<script src="/vendor/mocha.js"></script>
@@ -64,7 +40,11 @@
 		{{/if}}
 		<script>mocha.run();</script>
 	{{/if}}
-	
+	<div class="container">
+		<footer>
+			<p>&copy; 2016 Company, Inc.</p>
+		</footer>
+	</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
     <!-- Latest compiled and minified JavaScript -->

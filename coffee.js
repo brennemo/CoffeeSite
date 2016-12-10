@@ -20,6 +20,22 @@ app.get('/', function(req, res) {
 	res.render('home'); 
 });
 
+app.get('/about', function(req, res) {
+	res.render('about'); 
+});
+
+app.get('/menu', function(req, res) {
+	res.render('menu'); 
+});
+
+app.get('/contact', function(req, res) {
+	res.render('contact'); 
+});
+
+app.get('/locations', function(req, res) {
+	res.render('locations'); 
+});
+
 app.use(function(req, res, next) {
 	res.status(404);
 	res.render('404', { layout: 'error-page' });
