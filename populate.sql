@@ -80,4 +80,13 @@ insert into ShopMenus(shop, item) values((select shop_id from CoffeeShops where 
 insert into ShopMenus(shop, item) values((select shop_id from CoffeeShops where shop_name='Second Rail Coffee'), 
 										(select item_id from MenuItems where item_name='macchiato')); 
 insert into ShopMenus(shop, item) values((select shop_id from CoffeeShops where shop_name='Second Rail Coffee'), 
-										(select item_id from MenuItems where item_name='pour over')); 										
+										(select item_id from MenuItems where item_name='pour over')); 	
+
+insert into ShopPassport(passport_date, passport_shop, passport_visited) values('2016-02-20', 
+	(select shop_id from CoffeeShops where shop_name='Tony''s Estate'), 1); 
+insert into ShopPassport(passport_shop, passport_visited) values( 
+	(select shop_id from CoffeeShops where shop_name='Cafe Stumpy'), 0); 
+insert into ShopPassport(passport_date, passport_shop, passport_visited) values('2016-02-20', 
+	(select shop_id from CoffeeShops where shop_name='Grumptown'), 1); 
+insert into ShopPassport(passport_shop, passport_visited) values(
+	(select shop_id from CoffeeShops where shop_name='Second Rail Coffee'), 0); 									

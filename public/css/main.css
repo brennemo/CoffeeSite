@@ -5823,6 +5823,9 @@ body {
       color: #7f7f7f;
       text-decoration: none; }
 
+.visited0 {
+  opacity: 0.5; }
+
 .jumbotron h1 {
   font-style: italic; }
 

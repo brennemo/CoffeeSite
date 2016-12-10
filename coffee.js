@@ -21,8 +21,14 @@ app.get('/', function(req, res) {
 	res.render('home'); 
 });
 
-app.get('/passport', function(req, res) {
-	res.render('passport'); 
+app.get('/passport', function(req, res, next) {
+	mysql.pool.query('select ShopPassport.passport_shop, ShopPassport.passport_visited, ShopPassport.passport_date, CoffeeShops.shop_name, CoffeeShops.shop_photo_t from ShopPassport inner join CoffeeShops on ShopPassport.passport_shop = CoffeeShops.shop_id', function(err, rows, fields) {
+		if(err) {
+            next(err)
+            return;
+        }
+		res.render('passport', { rows : rows }); 
+	});	
 });
 
 app.get('/explore', function(req, res, next) {

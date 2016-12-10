@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS `ShopMenus`;
-DROP TABLE IF EXISTS `ShopVisits`;
+DROP TABLE IF EXISTS `ShopPassport`;
 DROP TABLE IF EXISTS `CoffeeShops`;
 DROP TABLE IF EXISTS `MenuItems`;
 
@@ -29,12 +29,12 @@ CREATE TABLE `ShopMenus` (
 	PRIMARY KEY(shop, item)
 ); 
 
-CREATE TABLE `ShopVisits` (
-	`visit_id` int auto_increment primary key not null,
-	`visit_date` date not null, 
-	`visit_shop` int not null,
-
-	FOREIGN KEY (visit_shop) REFERENCES CoffeeShops(shop_id) 
+CREATE TABLE `ShopPassport` (
+	`passport_id` int auto_increment primary key not null,
+	`passport_date` date,
+	`passport_shop` int not null,
+	`passport_visited` tinyint(1) not null,
+	FOREIGN KEY (passport_shop) REFERENCES CoffeeShops(shop_id) 
 		on delete cascade on update cascade
 );
 
