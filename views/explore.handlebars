@@ -1,14 +1,12 @@
 <div class="container">
     <!-- Example row of columns -->
     <div class="row">
-		{{#with rows.[0]}}   
-			<h1>{{shop_name}} Menu</h1>
-		{{/with}}
+		<h1>Explore</h1> 
     </div>
     <div class="row">
     	{{#each rows}}
-			<h3>{{this.item_name}}</h3> 
-		{{/each}}
-	</div> 
+    		<h3><a href="menu/{{this.shop_id}}">{{this.shop_name}}</a></h3>
+    	{{/each}}
+    </div> 
 </div>
 

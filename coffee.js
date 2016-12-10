@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var mysql = require('./dbcon');
 
 var handlebars = require('express3-handlebars').create({ defaultLayout:'main' });
 app.engine('handlebars', handlebars.engine);
@@ -20,20 +21,29 @@ app.get('/', function(req, res) {
 	res.render('home'); 
 });
 
-app.get('/about', function(req, res) {
-	res.render('about'); 
+app.get('/passport', function(req, res) {
+	res.render('passport'); 
 });
 
-app.get('/menu', function(req, res) {
-	res.render('menu'); 
+app.get('/explore', function(req, res, next) {
+	mysql.pool.query('select shop_id, shop_name from CoffeeShops', function(err, rows, fields) {
+		if(err) {
+            next(err)
+            return;
+        }
+		res.render('explore', { rows : rows }); 
+	});	
 });
 
-app.get('/contact', function(req, res) {
-	res.render('contact'); 
-});
-
-app.get('/locations', function(req, res) {
-	res.render('locations'); 
+app.get('/menu/:id', function(req, res, next) {
+	var id = req.params.id; 
+	mysql.pool.query('select MenuItems.item_id, MenuItems.item_name, CoffeeShops.shop_id, CoffeeShops.shop_name from MenuItems inner join ShopMenus on MenuItems.item_id = ShopMenus.item inner join CoffeeShops on ShopMenus.shop = CoffeeShops.shop_id where CoffeeShops.shop_id ='+id, function(err, rows, fields){
+		if(err) {
+			next(err)
+			return;
+		}
+		res.render('menu', {rows : rows});
+	});
 });
 
 app.use(function(req, res, next) {

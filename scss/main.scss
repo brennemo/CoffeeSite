@@ -1,8 +1,29 @@
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
+$font-stack: "freight-sans-pro"; 
 $testPink: #ffd8dd;
+$linkColor: #4c4c4c;
+$hoverLinkColor: #7f7f7f;
 
 body {
 	background-color: $testPink; 
+	font-family: $font-stack;
+
+	a {
+		color: $linkColor;
+		&:hover,  &:focus {
+			color: $hoverLinkColor;
+			text-decoration: none;
+		}
+	}
 }
 
+.jumbotron {
+	h1 {
+		font-style: italic; 
+	}
+}
+
+.navbar-brand { 
+	font-style: italic; 
+ }

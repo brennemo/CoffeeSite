@@ -1,2 +1,2 @@
 # CoffeeSite
-Personal project 
+Personal project for learning Node, Sass, etc.

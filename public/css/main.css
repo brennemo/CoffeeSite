@@ -5815,4 +5815,16 @@ button.close {
     display: none !important; } }
 
 body {
-  background-color: #ffd8dd; }
+  background-color: #ffd8dd;
+  font-family: "freight-sans-pro"; }
+  body a {
+    color: #4c4c4c; }
+    body a:hover, body a:focus {
+      color: #7f7f7f;
+      text-decoration: none; }
+
+.jumbotron h1 {
+  font-style: italic; }
+
+.navbar-brand {
+  font-style: italic; }
