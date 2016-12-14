@@ -2,14 +2,24 @@
     <!-- Example row of columns -->
     <div class="row">
 		{{#with rows.[0]}}   
-			<h1>{{shop_name}} Menu</h1>
-			<img src="{{shop_photo_m}}" alt="shop_name"/>
+			<h1>{{shop_name}}</h1>
+			<div class="col-md-8">
+				<img src="{{shop_photo_m}}" alt="shop_name" class="menu-img"/>
+			</div>
 		{{/with}}
+			<div class="col-md-4">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+			<h3>Menu</h3>
+			<ul class="list-unstyled">
+	    		{{#each rows}}
+					<li><h4>{{this.item_name}}</h4></li> 
+				{{/each}}
+			</ul>	
+			<h3>Location</h3>
+			{{#with rows.[0]}}  
+				<h4>{{shop_address}}</h4>
+			{{/with}}
+			</div>
     </div>
-    <div class="row">
-    	{{#each rows}}
-			<h3>{{this.item_name}}</h3> 
-		{{/each}}
-	</div> 
 </div>
 

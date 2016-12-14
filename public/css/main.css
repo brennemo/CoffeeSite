@@ -5836,3 +5836,9 @@ body {
   font-family: serifFontStack;
   font-style: italic;
   color: #ffffff; }
+
+.overlay-img {
+  padding-bottom: 20px; }
+
+.menu-img {
+  max-width: 640px; }

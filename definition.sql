@@ -10,8 +10,7 @@ CREATE TABLE `CoffeeShops` (
 	`shop_address` varchar(255),
 	`shop_photo_t` varchar(255),		#150 x 150 thumbnail
 	`shop_photo_s` varchar(255),		#320 x 212 small
-	`shop_photo_m` varchar(255),		#800 x 530 medium 
-	`shop_photo_l` varchar(255)			#1600 x 1060 large 
+	`shop_photo_m` varchar(255)			#800 x 530 medium 
 );
 
 CREATE TABLE `MenuItems` (
