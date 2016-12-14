@@ -70,6 +70,16 @@ app.get('/menu/:id', function(req, res, next) {
 	});
 });
 
+app.post('/add-passport', function(req, res, next) {
+	mysql.pool.query(insert into ShopPassport(passport_shop, passport_visited) values((?), 0), [req.body.id], function(err, rows, fields){
+    if(err) {
+       next(err)
+        return;
+    }
+   	res.redirect('/passport');
+    });
+});
+
 app.use(function(req, res, next) {
 	res.status(404);
 	res.render('404', { layout: 'error-page' });

@@ -6,17 +6,13 @@
     <div class="row">   
 	    {{#each rows}}
 	       <div class="col-xs-2">
-			    <div class="carousel slide" data-ride="carousel">
-				    <div class="carousel-inner">
-				        <div class="item active">
-				        	<a href="menu/{{this.shop_id}}">
-			               	 <img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="img-responsive {{isVisited this.passport_visited}}"/>
-				           </a>
-				           <h4>{{this.shop_name}}</h4>
-				           <p>{{passportDescription this.passport_date}}</p>
-				        </div><!--item active-->
-				    </div><!--carousel-inner-->
-				</div><!--carousel slide-->
+	        	<a href="menu/{{this.shop_id}}">
+	           	 <img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="img-responsive {{isVisited this.passport_visited}}"/>
+	           </a>
+	           <h4>{{this.shop_name}}</h4>
+	           <p>{{passportDescription this.passport_date}}</p>
+	           <button type="button" class="btn btn-link">Edit</button>
+	           <button type="button" class="btn btn-link">Remove</button>
 			</div><!--col-xs-2-->
 	    {{/each}}
     </div><!--row-->

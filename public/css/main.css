@@ -5817,22 +5817,19 @@ button.close {
 body {
   background-color: #ffd8dd;
   font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  body p {
-    font-size: 18px;
-    line-height: 24px; }
   body h1 {
     font-family: "utopia-std-display", serif;
     font-style: italic; }
-  body a {
+  body a, body .btn-link {
     color: #4c4c4c; }
-    body a:hover, body a:focus {
+    body a:hover, body a:focus, body .btn-link:hover, body .btn-link:focus {
       color: #7f7f7f;
       text-decoration: none; }
   body button {
     font-style: italic; }
 
 .passport-unvisited {
-  opacity: 0.5; }
+  opacity: 0.3; }
 
 .jumbotron h1 {
   font-style: italic; }
@@ -5850,3 +5847,7 @@ body {
 
 .menu-img {
   max-width: 640px; }
+
+.menu-description {
+  font-size: 18px;
+  line-height: 24px; }

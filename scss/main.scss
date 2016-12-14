@@ -11,17 +11,12 @@ body {
 	background-color: $testPink; 
 	font-family: $sansFontStack;
 
-	p {
-		font-size: 18px;
-		line-height: 24px;
-	}
-
 	h1 {
 		font-family: $serifFontStack;
 		font-style: italic;
 	}
 
-	a {
+	a, .btn-link {
 		color: $linkColor;
 		&:hover,  &:focus {
 			color: $hoverLinkColor;
@@ -36,7 +31,7 @@ body {
 
 
 .passport-unvisited {
-	opacity: 0.5; 
+	opacity: 0.3; 
 }
 
 .jumbotron {
@@ -61,5 +56,10 @@ body {
 
 .menu-img {
 	max-width: 640px; 
+}
+
+.menu-description {
+	font-size: 18px;
+	line-height: 24px;
 }
 
