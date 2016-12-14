@@ -2,8 +2,16 @@ var express = require('express');
 var app = express();
 var mysql = require('./dbcon');
 
-var handlebars = require('express3-handlebars').create({ defaultLayout:'main' });
-app.engine('handlebars', handlebars.engine);
+//var exphbs  = require('express-handlebars').create({ defaultLayout:'main' });
+var exphbs  = require('express-handlebars');
+var hbs = exphbs.create({ 
+	defaultLayout:'main', 
+    helpers: {
+        foo: function () { return 'FOO!'; }		//test
+    }
+});
+
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
