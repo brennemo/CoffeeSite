@@ -1,13 +1,18 @@
 <div class="container">
-    <!-- Example row of columns -->
     <div class="row">
 		<h1>Explore</h1> 
     </div>
     <div class="row">
     	{{#each rows}}
-    		<h3><a href="menu/{{this.shop_id}}">{{this.shop_name}}</a></h3>
-    		<img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}"/>
+	    	<div class="col-xs-6 col-sm-3">
+		    	<div class="explore-container">
+		    		<a href="menu/{{this.shop_id}}">
+		    			<img src="{{this.shop_photo_s}}" alt="{{this.shop_name}}"/>
+		    			<h2>{{this.shop_name}}</h2>
+		    		</a>
+		    	</div><!--explore-container-->
+		    </div><!--col-xs-6 col-md-4-->
     	{{/each}}
-    </div> 
-</div>
+    </div> <!--row-->
+</div><!--container-->
 

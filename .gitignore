@@ -2,20 +2,14 @@
 node_modules*
 
 # don't commit log files
-log
+*.log
+npm-debug.log
 
 #don't commit credentials
 dbcon.js 
-.gitignore.txt
 
-dbcon.js
 
-npm-debug.log
 
-*.log
 
-npm-debug.log
 
-npm-debug.log
 
-npm-debug.log

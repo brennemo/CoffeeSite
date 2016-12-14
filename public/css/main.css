@@ -5816,7 +5816,7 @@ button.close {
 
 body {
   background-color: #ffd8dd;
-  font-family: "freight-sans-pro"; }
+  font-family: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   body a {
     color: #4c4c4c; }
     body a:hover, body a:focus {
@@ -5831,3 +5831,16 @@ body {
 
 .navbar-brand {
   font-style: italic; }
+
+.explore-container {
+  position: relative; }
+  .explore-container p, .explore-container h2, .explore-container h4 {
+    font-family: serifFontStack;
+    font-style: italic;
+    position: absolute;
+    color: #ffffff; }
+  .explore-container img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; }

@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/passport', function(req, res, next) {
-	mysql.pool.query('select ShopPassport.passport_shop, ShopPassport.passport_visited, ShopPassport.passport_date, CoffeeShops.shop_name, CoffeeShops.shop_photo_t from ShopPassport inner join CoffeeShops on ShopPassport.passport_shop = CoffeeShops.shop_id', function(err, rows, fields) {
+	mysql.pool.query('select ShopPassport.passport_shop, ShopPassport.passport_visited, ShopPassport.passport_date, CoffeeShops.shop_id, CoffeeShops.shop_name, CoffeeShops.shop_photo_t from ShopPassport inner join CoffeeShops on ShopPassport.passport_shop = CoffeeShops.shop_id', function(err, rows, fields) {
 		if(err) {
             next(err)
             return;
@@ -32,7 +32,7 @@ app.get('/passport', function(req, res, next) {
 });
 
 app.get('/explore', function(req, res, next) {
-	mysql.pool.query('select shop_id, shop_name, shop_photo_t from CoffeeShops', function(err, rows, fields) {
+	mysql.pool.query('select shop_id, shop_name, shop_photo_s from CoffeeShops', function(err, rows, fields) {
 		if(err) {
             next(err)
             return;

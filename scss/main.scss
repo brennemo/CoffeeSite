@@ -1,13 +1,14 @@
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
 
-$font-stack: "freight-sans-pro"; 
+$sansFontStack: "freight-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+$serifFontStack: "utopia-std-display", serif;
 $testPink: #ffd8dd;
 $linkColor: #4c4c4c;
 $hoverLinkColor: #7f7f7f;
 
 body {
 	background-color: $testPink; 
-	font-family: $font-stack;
+	font-family: $sansFontStack;
 
 	a {
 		color: $linkColor;
@@ -30,4 +31,21 @@ body {
 
 .navbar-brand { 
 	font-style: italic; 
+ }
+
+ .explore-container {
+ 	position: relative;
+ 	p, h2, h4 {
+ 		font-family: serifFontStack;
+ 		font-style: italic;
+ 		position: absolute;
+ 		color: #ffffff;
+ 	}
+ 	img {
+ 		position: absolute;
+  		max-width: 100%;
+  		height: auto;
+    	vertical-align: middle;
+ 	}
+
  }

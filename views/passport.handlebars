@@ -5,7 +5,14 @@
     </div>
     <div class="row">
     	{{#each rows}}
-    		<img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="visited{{this.passport_visited}}"/>
+    		<div class="col-xs-2">
+    		<div class="explore-container">
+	    			<a href="menu/{{this.shop_id}}">
+	    				<img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="visited{{this.passport_visited}}"/>
+	    				<h4 class="text-center">{{this.shop_name}}</h4>
+	    			</a>
+    			</div>
+    		</div>
     	{{/each}}
     </div> 
 </div>
