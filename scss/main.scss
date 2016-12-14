@@ -5,10 +5,21 @@ $serifFontStack: "utopia-std-display", serif;
 $testPink: #ffd8dd;
 $linkColor: #4c4c4c;
 $hoverLinkColor: #7f7f7f;
+$overlayTextColor: #ffffff;
 
 body {
 	background-color: $testPink; 
 	font-family: $sansFontStack;
+
+	p {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	h1 {
+		font-family: $serifFontStack;
+		font-style: italic;
+	}
 
 	a {
 		color: $linkColor;
@@ -17,7 +28,12 @@ body {
 			text-decoration: none;
 		}
 	}
+
+	button {
+		font-style: italic;
+	}
 }
+
 
 .passport-unvisited {
 	opacity: 0.5; 
@@ -36,7 +52,7 @@ body {
  .overlay-text {
 	font-family: serifFontStack;
  	font-style: italic;
- 	color: #ffffff;
+ 	color: $overlayTextColor;
  }
 
  .overlay-img {

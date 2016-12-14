@@ -8,7 +8,15 @@ var hbs = exphbs.create({
 	defaultLayout:'main', 
     helpers: {
         isVisited: function(visit) { 
-        return visit == 1? "passport-visited" : "passport-unvisited"; 
+        	return visit == 1? "passport-visited" : "passport-unvisited"; 
+        }, 
+        passportDescription: function(date) {
+        	if (date == null) return "unvisited";
+        	else {
+        		var dateArray = String(date).split(/[- :]/); 
+        		var formattedDate = dateArray[1] + " " + dateArray[2] + ", " + dateArray[3];	
+        		return "visited on " + formattedDate;
+        	}
         }
     }
 });
