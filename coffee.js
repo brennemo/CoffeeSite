@@ -7,7 +7,9 @@ var exphbs  = require('express-handlebars');
 var hbs = exphbs.create({ 
 	defaultLayout:'main', 
     helpers: {
-        foo: function () { return 'FOO!'; }		//test
+        isVisited: function(visit) { 
+        return visit == 1? "passport-visited" : "passport-unvisited"; 
+        }
     }
 });
 

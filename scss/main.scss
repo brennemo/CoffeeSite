@@ -19,7 +19,7 @@ body {
 	}
 }
 
-.visited0 {
+.passport-unvisited {
 	opacity: 0.5; 
 }
 
@@ -33,19 +33,10 @@ body {
 	font-style: italic; 
  }
 
- .explore-container {
- 	position: relative;
- 	p, h2, h4 {
- 		font-family: serifFontStack;
- 		font-style: italic;
- 		position: absolute;
- 		color: #ffffff;
- 	}
- 	img {
- 		position: absolute;
-  		max-width: 100%;
-  		height: auto;
-    	vertical-align: middle;
- 	}
-
+ .overlay-text {
+	font-family: serifFontStack;
+ 	font-style: italic;
+ 	color: #ffffff;
  }
+
+

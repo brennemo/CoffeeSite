@@ -3,18 +3,21 @@
     <div class="row">
 		<h1>My Passport</h1> 
     </div>
-    <div class="row">
-    	{{#each rows}}
-    		<div class="col-xs-2">
-    		<div class="explore-container">
-	    			<a href="menu/{{this.shop_id}}">
-	    				<img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="visited{{this.passport_visited}}"/>
-	    				<h4 class="text-center">{{this.shop_name}}</h4>
-	    			</a>
-    			</div>
-    		</div>
-    		<p>{{foo}}</p>
-    	{{/each}}
-    </div> 
-</div>
+    <div class="row">   
+	    {{#each rows}}
+	       <div class="col-xs-2">
+			    <div class="carousel slide" data-ride="carousel">
+				    <div class="carousel-inner">
+				        <div class="item active">
+				        <a href="menu/{{this.shop_id}}">
+			                <img src="{{this.shop_photo_t}}" alt="{{this.shop_name}}" class="img-responsive {{isVisited this.passport_visited}}"/>
+				           <div class="carousel-caption"><h4 class="overlay-text">{{this.shop_name}}</h4></div>
+				           </a>
+				        </div><!--item active-->
+				    </div><!--carousel-inner-->
+				</div><!--carousel slide-->
+			</div><!--col-xs-2-->
+	    {{/each}}
+    </div><!--row-->
+</div><!--container-->
 

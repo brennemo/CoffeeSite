@@ -5823,7 +5823,7 @@ body {
       color: #7f7f7f;
       text-decoration: none; }
 
-.visited0 {
+.passport-unvisited {
   opacity: 0.5; }
 
 .jumbotron h1 {
@@ -5832,15 +5832,7 @@ body {
 .navbar-brand {
   font-style: italic; }
 
-.explore-container {
-  position: relative; }
-  .explore-container p, .explore-container h2, .explore-container h4 {
-    font-family: serifFontStack;
-    font-style: italic;
-    position: absolute;
-    color: #ffffff; }
-  .explore-container img {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle; }
+.overlay-text {
+  font-family: serifFontStack;
+  font-style: italic;
+  color: #ffffff; }
