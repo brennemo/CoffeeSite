@@ -71,7 +71,17 @@ app.get('/menu/:id', function(req, res, next) {
 });
 
 app.post('/add-passport', function(req, res, next) {
-	mysql.pool.query(insert into ShopPassport(passport_shop, passport_visited) values((?), 0), [req.body.id], function(err, rows, fields){
+	mysql.pool.query('insert into ShopPassport(passport_shop, passport_visited) values(?, 0)', [req.body.id], function(err, rows, fields){
+    if(err) {
+       next(err)
+        return;
+    }
+   	res.redirect('/passport');
+    });
+});
+
+app.get('/delete-passport',function(req,res,next){
+	mysql.pool.query('delete from ShopPassport where passport_id = ?', [req.query.id], function(err, rows, fields){
     if(err) {
        next(err)
         return;
